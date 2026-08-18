@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Higgsfield Prompt Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">H</span>
+      <span>
+        <strong>Higgsfield Prompt Library</strong>
+        <small>Original prompts, references, and production notes</small>
+      </span>
+    </div>
+    <div class="header-meta"><span id="count"></span><span class="local-status">Local workspace</span></div>
+  </header>
+
+  <main>
+    <aside class="sidebar">
+      <button id="guide-nav" class="guide-nav" type="button" aria-controls="guide-view">
+        <span class="guide-icon">&#10022;</span>
+        <span class="guide-nav-copy"><strong>Video Prompt Guide</strong><small>MD &middot; Rules, template, QA</small></span>
+        <span class="guide-arrow">&rarr;</span>
+      </button>
+
+      <div class="sidebar-heading"><span>COLLECTED PROMPTS</span><span id="sidebar-count"></span></div>
+      <nav id="entries" aria-label="Collected prompt folders"></nav>
+    </aside>
+
+    <section id="viewer">
+      <div id="empty" class="empty-state">Select a prompt from the library.</div>
+
+      <div id="content" hidden>
+        <div class="meta">
+          <div>
+            <p class="eyebrow">COLLECTED VIDEO PROMPT</p>
+            <h1 id="title"></h1>
+          </div>
+          <div class="meta-actions"><a id="source-link" target="_blank" rel="noreferrer">Open source page <span>&nearr;</span></a><span id="status"></span></div>
+        </div>
+
+        <div id="media-row">
+          <div id="media" hidden><video id="source-video" controls preload="metadata"></video><img id="source-thumbnail" alt="Video thumbnail"></div>
+          <section id="assets" hidden>
+            <div class="panel-heading"><h2>Reference assets</h2><span>SELECT TO PREVIEW</span></div>
+            <a id="asset-preview-link" target="_blank"><img id="asset-preview" alt="Selected asset preview"></a>
+            <div id="asset-name"></div>
+            <div id="asset-grid"></div>
+          </section>
+        </div>
+
+        <dl id="details" class="details-grid"></dl>
+
+        <div class="columns">
+          <article class="prompt-panel">
+            <div class="label"><span><span class="language-dot original-dot"></span>Original / English</span><button data-copy="original" type="button">Copy</button></div>
+            <div id="original" class="prompt-rich"></div>
+          </article>
+          <article class="prompt-panel">
+            <div class="label"><span><span class="language-dot translated-dot"></span>Translation / Korean</span><button data-copy="translated" type="button">Copy</button></div>
+            <div id="translated" class="prompt-rich"></div>
+          </article>
+        </div>
+      </div>
+
+      <section id="guide-view" hidden aria-labelledby="guide-view-title">
+        <div class="guide-hero">
+          <div class="guide-hero-copy">
+            <p class="eyebrow">LEARNING DOCUMENT &middot; MD</p>
+            <h1 id="guide-view-title">Video Prompt Guide</h1>
+            <p>Rules, reusable structure, and a quality checklist distilled from the collected original prompts.</p>
+          </div>
+          <div class="guide-hero-side">
+            <div class="guide-hero-stats"><span>42</span><small>original prompts analysed</small></div>
+            <a id="guide-download" class="guide-download" download="video_prompt_writing_rules.md">Download MD <span>&darr;</span></a>
+          </div>
+        </div>
+        <div class="guide-layout">
+          <nav id="guide-toc" class="guide-toc" aria-label="Guide contents"></nav>
+          <article id="guide-content" class="markdown-body"><div class="guide-loading">Loading guide&hellip;</div></article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
