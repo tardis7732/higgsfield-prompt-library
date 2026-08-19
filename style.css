@@ -177,6 +177,7 @@ h1 { max-width: 1000px; margin: 0; color: #fbfcfe; font-size: clamp(21px, 2.1vw,
 .markdown-body h3 { margin: 30px 0 10px; color: #dcfc88; font-size: 16px; letter-spacing: -.015em; }
 .markdown-body h4 { margin: 24px 0 8px; color: #dfe8ee; font-size: 14px; }
 .markdown-body p { margin: 0 0 16px; font-size: 14px; line-height: 1.82; overflow-wrap: anywhere; }
+.markdown-body .markdown-image { display: block; width: min(100%, 760px); height: auto; margin: 25px auto 30px; border: 1px solid #3b4653; border-radius: 12px; background: #f7f8fa; box-shadow: 0 14px 30px rgba(0, 0, 0, .22); }
 .markdown-body strong { color: #f0f5f7; font-weight: 750; }
 .markdown-body code { padding: .12em .34em; border: 1px solid #37414d; border-radius: 5px; background: #20262e; color: #e5ff9e; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .88em; }
 .markdown-body pre { overflow: auto; margin: 18px 0 22px; padding: 16px; border: 1px solid #303a46; border-radius: 10px; background: #0d1116; }

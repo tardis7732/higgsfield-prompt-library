@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cinematic video prompt guide: four-step workflow</title>
+  <desc id="desc">A polished workflow illustration: attach the prompt-writing guide, paste the English instruction, add a Korean brief, and receive a structured video prompt.</desc>
+  <defs>
+    <linearGradient id="page" x1="88" y1="40" x2="1420" y2="890" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBF8"/>
+      <stop offset=".52" stop-color="#F3F8F5"/>
+      <stop offset="1" stop-color="#EEF5F1"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="245" y1="235" x2="1210" y2="696" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDF4EB"/>
+      <stop offset=".48" stop-color="#EDF7F3"/>
+      <stop offset="1" stop-color="#D9EAF5"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1A9C6A"/>
+      <stop offset="1" stop-color="#087A58"/>
+    </linearGradient>
+    <linearGradient id="bubble" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#DCEEFF"/>
+      <stop offset="1" stop-color="#C9E0F5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#25483A" flood-opacity=".11"/>
+    </filter>
+    <filter id="smallShadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#214237" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7.5" refY="5" orient="auto">
+      <path d="M1 1L8 5L1 9" stroke="#19966B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </marker>
+    <style>
+      .sans { font-family: Inter, Pretendard, &quot;Noto Sans KR&quot;, Arial, sans-serif; }
+      .mono { font-family: &quot;SFMono-Regular&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; }
+      .muted { fill: #6B7C74; }
+      .ink { fill: #18352A; }
+      .line { stroke: #D8E4DD; }
+    </style>
+  </defs>
+
+  <!-- light page -->
+  <rect width="1500" height="900" rx="36" fill="url(#page)"/>
+  <circle cx="1395" cy="94" r="170" fill="#DDF2E7" opacity=".62"/>
+  <circle cx="104" cy="843" r="190" fill="#DCECF8" opacity=".68"/>
+  <path d="M1202 65C1270 83 1320 117 1370 170" stroke="#A6D9C0" stroke-width="2" stroke-dasharray="5 8" opacity=".72"/>
+
+  <!-- headline -->
+  <g class="sans">
+    <rect x="104" y="72" width="144" height="34" rx="17" fill="#DDF3E7"/>
+    <text x="176" y="95" text-anchor="middle" font-size="14" font-weight="700" letter-spacing="1.6" fill="#087A58">QUICK START</text>
+    <text x="104" y="158" font-size="42" font-weight="750" class="ink">가이드를 붙이고, 브리프만 적으세요.</text>
+    <text x="104" y="196" font-size="19" class="muted">Cinematic Video Prompt Writing Rules로 일관된 영어 비디오 프롬프트를 만드는 4단계</text>
+  </g>
+
+  <!-- application frame -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="244" width="1340" height="560" rx="28" fill="#FCFDFC" stroke="#DCE8E1" stroke-width="2"/>
+    <path d="M80 306C80 289.431 93.4315 276 110 276H1390C1406.57 276 1420 289.431 1420 306V328H80V306Z" fill="#F2F7F4"/>
+    <circle cx="116" cy="302" r="6" fill="#FF8C86"/>
+    <circle cx="138" cy="302" r="6" fill="#F7C55A"/>
+    <circle cx="160" cy="302" r="6" fill="#6BC58C"/>
+    <rect x="625" y="289" width="250" height="25" rx="12.5" fill="#E5EFEA"/>
+    <text x="750" y="307" text-anchor="middle" class="sans" font-size="12" font-weight="650" fill="#587167">PROMPT WORKSPACE</text>
+  </g>
+
+  <!-- flow spine -->
+  <path d="M337 462H427M650 462H740M963 462H1053" stroke="#78C6A2" stroke-width="2.5" stroke-dasharray="4 7" marker-end="url(#arrow)"/>
+
+  <!-- step 1 -->
+  <g class="sans" filter="url(#smallShadow)">
+    <rect x="110" y="370" width="227" height="270" rx="20" fill="#FFF" stroke="#D8E7DE" stroke-width="1.5"/>
+    <rect x="132" y="392" width="32" height="32" rx="10" fill="url(#accent)"/>
+    <path d="M142 403.5H154M142 409.5H154M142 415.5H150" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+    <text x="178" y="407" font-size="13" font-weight="750" fill="#087A58">STEP 01</text>
+    <text x="132" y="456" font-size="22" font-weight="750" class="ink">가이드 MD 첨부</text>
+    <text x="132" y="484" font-size="14" class="muted">먼저 규칙 파일을 대화에</text>
+    <text x="132" y="505" font-size="14" class="muted">한 번 붙여 넣습니다.</text>
+    <rect x="132" y="535" width="183" height="73" rx="13" fill="#F3F8F5" stroke="#D7E9DE"/>
+    <rect x="146" y="550" width="28" height="35" rx="6" fill="#E2F4EA" stroke="#82CDA5"/>
+    <path d="M154 562H166M154 568H166M154 574H162" stroke="#138760" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="184" y="559" font-size="10.8" font-weight="700" fill="#254D3D">video_prompt_</text>
+    <text x="184" y="575" font-size="10.8" font-weight="700" fill="#254D3D">writing_rules.md</text>
+    <text x="184" y="594" font-size="10.5" class="muted">첨부됨</text>
+  </g>
+
+  <!-- step 2 -->
+  <g class="sans" filter="url(#smallShadow)">
+    <rect x="427" y="370" width="223" height="270" rx="20" fill="#FFF" stroke="#D8E7DE" stroke-width="1.5"/>
+    <rect x="449" y="392" width="32" height="32" rx="10" fill="#E5EFFA"/>
+    <path d="M458 403H473M458 409H470M458 415H466" stroke="#3B77B1" stroke-width="1.7" stroke-linecap="round"/>
+    <text x="495" y="407" font-size="13" font-weight="750" fill="#3B77B1">STEP 02</text>
+    <text x="449" y="456" font-size="22" font-weight="750" class="ink">영문 지시문 입력</text>
+    <rect x="449" y="478" width="179" height="123" rx="13" fill="url(#bubble)"/>
+    <text x="464" y="501" class="mono" font-size="10.3" fill="#244C70">Use the attached guide</text>
+    <text x="464" y="519" class="mono" font-size="10.3" fill="#244C70">to turn my brief into</text>
+    <text x="464" y="537" class="mono" font-size="10.3" fill="#244C70">one self-contained</text>
+    <text x="464" y="555" class="mono" font-size="10.3" fill="#244C70">English prompt.</text>
+    <line x1="464" y1="570" x2="584" y2="570" stroke="#A5C2D9"/>
+    <text x="464" y="588" class="mono" font-size="9.5" fill="#466C8B">No analysis. Prompt only.</text>
+  </g>
+
+  <!-- step 3 -->
+  <g class="sans" filter="url(#smallShadow)">
+    <rect x="740" y="370" width="223" height="270" rx="20" fill="#FFF" stroke="#D8E7DE" stroke-width="1.5"/>
+    <rect x="762" y="392" width="32" height="32" rx="10" fill="#F4E9FF"/>
+    <path d="M770 406.5H786M770 412H781" stroke="#8A4FB0" stroke-width="1.7" stroke-linecap="round"/>
+    <text x="808" y="407" font-size="13" font-weight="750" fill="#884BAE">STEP 03</text>
+    <text x="762" y="456" font-size="22" font-weight="750" class="ink">한국어 브리프 추가</text>
+    <rect x="762" y="478" width="179" height="123" rx="13" fill="#FBF6FE" stroke="#EEE0F8"/>
+    <text x="777" y="503" font-size="12.5" font-weight="650" fill="#4F2A65">20대 곱슬머리 남성이</text>
+    <text x="777" y="524" font-size="12.5" font-weight="650" fill="#4F2A65">파리 골목을 달린다.</text>
+    <text x="777" y="551" font-size="11.3" fill="#815A92">검은 정장 남자가 추격,</text>
+    <text x="777" y="570" font-size="11.3" fill="#815A92">쓰레기통을 넘어진다.</text>
+    <rect x="777" y="580" width="86" height="14" rx="7" fill="#EAD9F7"/>
+    <text x="870" y="591" font-size="9.5" fill="#8A619B">원하는 장면만</text>
+  </g>
+
+  <!-- step 4, output -->
+  <g class="sans" filter="url(#smallShadow)">
+    <rect x="1053" y="353" width="327" height="304" rx="22" fill="#123B2D"/>
+    <rect x="1075" y="376" width="34" height="34" rx="11" fill="#3DCB91"/>
+    <path d="M1084 393L1090 399L1101 385" stroke="#10392A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1122" y="390" font-size="13" font-weight="750" fill="#87E2B8">STEP 04</text>
+    <text x="1075" y="439" font-size="23" font-weight="750" fill="white">구조화된 프롬프트 받기</text>
+    <text x="1075" y="466" font-size="13" fill="#B6D5C7">복사해서 바로 비디오 모델에 사용</text>
+    <rect x="1075" y="489" width="283" height="133" rx="13" fill="#0C2D21" stroke="#285B47"/>
+    <text x="1090" y="512" class="mono" font-size="10.4" font-weight="700" fill="#76D8AA">SCENE CONTEXT</text>
+    <text x="1090" y="532" class="mono" font-size="9.8" fill="#E1F4EA">A photoreal live-action</text>
+    <text x="1090" y="548" class="mono" font-size="9.8" fill="#E1F4EA">10-second chase reel...</text>
+    <text x="1090" y="574" class="mono" font-size="10.4" font-weight="700" fill="#76D8AA">CAMERA · LIGHTING · AUDIO</text>
+    <text x="1090" y="596" class="mono" font-size="9.8" fill="#E1F4EA">Continuity-safe final prompt</text>
+    <rect x="1256" y="516" width="81" height="24" rx="12" fill="#1A9C6A"/>
+    <text x="1296.5" y="533" text-anchor="middle" font-size="10" font-weight="750" fill="white">PROMPT ONLY</text>
+  </g>
+
+  <!-- footer tip -->
+  <g class="sans">
+    <rect x="110" y="692" width="1270" height="72" rx="18" fill="#ECF7F1" stroke="#D2EBDD"/>
+    <circle cx="145" cy="728" r="17" fill="#D1F0DF"/>
+    <path d="M145 719V729M145 737.5V738" stroke="#087A58" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="178" y="724" font-size="15" font-weight="750" class="ink">핵심</text>
+    <text x="178" y="746" font-size="14" class="muted">가이드는 매번 다시 설명할 필요가 없습니다. 영문 지시문과 한국어 장면 브리프만 바꿔서 반복 사용하세요.</text>
+    <rect x="1193" y="712" width="157" height="31" rx="15.5" fill="#D8F1E3"/>
+    <text x="1271.5" y="733" text-anchor="middle" font-size="12" font-weight="750" fill="#087A58">REUSABLE WORKFLOW</text>
+  </g>
+</svg>

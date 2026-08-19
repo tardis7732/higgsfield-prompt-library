@@ -4,6 +4,37 @@
 >
 > 이 문서는 특정 서비스의 공식 문법이 아닙니다. ADILIADA 원본들이 실제로 사용하는 **정밀한 촬영·연속성 설계 방식**을 재사용할 수 있도록 정리한 것입니다.
 
+## ChatGPT 또는 다른 AI에 바로 쓰는 방법
+
+1. 이 가이드 MD를 다운로드해 새 대화에 첨부합니다.
+2. 사용할 참조 이미지·영상이 있다면 같은 대화에 함께 첨부합니다.
+3. 아래 영어 지시문을 붙여 넣고, `My brief:` 아래에 원하는 장면을 한국어 또는 영어로 적습니다.
+4. 최종 답변은 설명·번역·분석 없이 **영어 비디오 프롬프트 본문만** 받습니다.
+
+![가이드 MD 첨부 → 영어 지시문 → 한국어 브리프 → 구조화된 영어 프롬프트](../assets/prompt-guide-usage.svg)
+
+```text
+Use the attached "Cinematic Video Prompt Writing Rules" as the governing style guide.
+Turn my brief and attached references into one self-contained English video-generation prompt.
+Treat it as a continuity-safe shot plan, not a mood board.
+Use uppercase English section headings. Follow only the sections needed for the scene.
+Resolve reference scope, first-frame state, shot structure, camera, timing, physics,
+lighting, audio, and final locks before writing.
+Output only the final English prompt. Do not output workflow notes, patch logs,
+analysis, translations, Hide, or unresolved reference tokens.
+
+My brief:
+20대 곱슬머리 남성이 밝은 오후 2시의 파리 거리에서 달린다. 검은 양복의 남성이
+그를 뒤쫓는다. 10초 안에 그는 쓰레기통을 넘어뜨리고 행인과 어깨를 부딪히지만
+멈추지 않고 계속 달린다.
+```
+
+참조 자료가 있다면 각 자료가 제어할 범위를 짧게 적습니다. 예: `@Image 1: character face only`,
+`@Image 2: location and lighting only`, `@Video 1: camera timing for Shot 3 only`.
+필수 정보가 빠져 결과가 크게 달라질 때에는 AI가 프롬프트를 쓰기 전에 짧고 구체적인 질문을 하게 합니다.
+
+---
+
 ## 이 문서의 사용법
 
 다른 AI에게 이 문서와 함께 장면 브리프, 사용할 참조 이미지/영상, 반드시 지켜야 할 조건을 전달합니다. 그 AI는 최종적으로 **영어 비디오 프롬프트 본문만** 작성해야 합니다. 프롬프트는 짧은 분위기 문장이 아니라, 영상 생성 모델이 헷갈릴 지점을 미리 없애는 촬영 설계서여야 합니다.

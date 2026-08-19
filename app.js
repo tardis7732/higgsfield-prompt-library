@@ -168,8 +168,25 @@ function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 }
 
+function guideMediaUrl(value) {
+  try {
+    const base = new URL(config.guideUrl, window.location.href);
+    const sourcePath = config.guideUrl.startsWith("/output/") && value.startsWith("../assets/")
+      ? `../ui/assets/${value.slice("../assets/".length)}`
+      : value;
+    const url = new URL(sourcePath, base);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+  } catch {
+    return "";
+  }
+}
+
 function inlineMarkdown(value) {
   let html = escapeHtml(value);
+  html = html.replace(/!\[([^\]]*)\]\(([^\s)]+)\)/g, (_match, alt, href) => {
+    const src = guideMediaUrl(href);
+    return src ? `<img class="markdown-image" src="${escapeHtml(src)}" alt="${alt}" loading="lazy">` : alt;
+  });
   html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
   html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1 <span class="external-link">&#8599;</span></a>');
