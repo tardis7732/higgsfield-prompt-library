@@ -57,7 +57,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-
 .brand strong { display: block; color: #f6f8fa; font-size: 15px; letter-spacing: -.01em; }
 .brand small { display: block; margin-top: 2px; color: var(--subtle); font-size: 11px; }
 .header-meta { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; white-space: nowrap; }
-.local-status { padding: 5px 8px; border: 1px solid #354025; border-radius: 999px; color: #b9d883; background: #172015; }
 
 main { display: grid; grid-template-columns: 304px minmax(0, 1fr); height: calc(100vh - 68px); }
 .sidebar {
@@ -221,7 +220,7 @@ h1 { max-width: 1000px; margin: 0; color: #fbfcfe; font-size: clamp(21px, 2.1vw,
 @media (max-width: 700px) {
   body { height: auto; overflow: auto; }
   .topbar { height: 58px; padding: 0 14px; }
-  .brand small, .local-status { display: none; }
+  .brand small { display: none; }
   .brand strong { font-size: 13px; }
   main { display: block; height: auto; }
   .sidebar { max-height: 290px; padding: 10px; border-right: 0; border-bottom: 1px solid var(--line); }

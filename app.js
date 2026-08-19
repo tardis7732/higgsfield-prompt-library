@@ -12,7 +12,12 @@ const config = window.PROMPT_LIBRARY_CONFIG || {
   guideUrl: "/output/video_prompt_writing_rules.md",
 };
 const labels = { Feature: "Model", Quality: "Quality", Bitrate: "Bitrate", Size: "Size", Created: "Created" };
-const clean = (text) => (text || "").replace(/\n?\s*(?:Hide|\uc228\uae30\uae30|\uc228\uae30\ub2e4|\uac10\ucd94\uae30)\s*$/i, "").trim();
+const uiTail = /\s*(?:Hide|\uc228\uae30\uae30|\uc228\uae30\ub2e4|\uc228\ub2e4|\uc228\uae40|\uac10\ucd94\uae30|\uac10\ucd94\ub2e4|\uc811\uae30)\s*$/iu;
+const clean = (text) => {
+  let value = String(text || "").trim();
+  while (uiTail.test(value)) value = value.replace(uiTail, "").trim();
+  return value;
+};
 const koreanHeadings = [
   "\uc7a5\uba74 \ucee8\ud14d\uc2a4\ud2b8", "\ud65c\uc131 \ucc38\uc870", "\uc704\uce58 \uc9c0\ub3c4", "\uccab \ubc88\uc9f8 \ud504\ub808\uc784 \ubc0f \uacf5\uac04 \ube14\ub85c\ud0b9",
   "\ud615\uc2dd \ubaa8\ub4dc", "\uad11\ud559", "\uce74\uba54\ub77c", "\uc561\uc158 \ud0c0\uc774\ubc0d", "\ubb3c\ub9ac\ud559", "\uc870\uba85", "\uc624\ub514\uc624", "\uae0d\uc815\uc801 \uc7a0\uae08", "\ubd80\uc815\uc801 \uc7a0\uae08",
@@ -389,6 +394,9 @@ $("#guide-nav").addEventListener("click", showGuide);
 document.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", () => copyPrompt(button)));
 $("#guide-download").href = config.guideUrl;
 
+// The guide is the library's landing view. Selecting an entry switches back to its video and prompts.
+showGuide();
+
 async function loadLibrary() {
   if (config.libraryUrl) {
     const response = await fetch(config.libraryUrl, { cache: "no-store" });
@@ -409,6 +417,5 @@ loadLibrary().then((entries) => {
   $("#count").textContent = `${entries.length} prompts`;
   $("#sidebar-count").textContent = entries.length;
   renderList();
-  if (state.entries[0]) select(state.entries[0]);
-  else { $("#empty").hidden = false; $("#empty").textContent = "No collected prompts yet."; }
+  if (!state.entries.length) { $("#empty").hidden = false; $("#empty").textContent = "No collected prompts yet."; }
 }).catch((error) => { $("#empty").hidden = false; $("#empty").textContent = `Could not load the library: ${error.message}`; });
