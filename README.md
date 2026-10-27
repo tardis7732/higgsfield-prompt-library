@@ -37,7 +37,9 @@
 
 ## ChatGPT 또는 다른 AI에서 활용하기
 
-1. [비디오 프롬프트 작성 가이드 MD](./downloads/video_prompt_writing_rules.md)를 다운로드합니다.
+웹페이지에는 사람을 위한 사용법과 예시를 표시하고, 다운로드 버튼은 사람용 안내를 제외한 GPT용 규칙 파일을 별도로 제공합니다.
+
+1. [GPT용 비디오 프롬프트 규칙 MD](./downloads/video_prompt_writing_rules_for_gpt.md)를 다운로드합니다.
 2. 새 대화에 가이드 MD와 사용할 참조 이미지·영상을 첨부합니다.
 3. 아래 지시문을 붙여 넣고 `My brief:` 아래에 만들고 싶은 장면을 작성합니다.
 4. AI가 설명이나 분석 없이 바로 사용할 수 있는 영어 비디오 프롬프트만 출력하도록 합니다.
@@ -79,7 +81,8 @@ My brief:
 ├─ data/
 │  └─ library.json                    # 브라우저용 프롬프트 라이브러리
 ├─ downloads/
-│  └─ video_prompt_writing_rules.md   # 다운로드용 작성 가이드
+│  ├─ video_prompt_writing_rules.md   # 웹페이지용 사용법과 작성 가이드
+│  └─ video_prompt_writing_rules_for_gpt.md # GPT 첨부용 규칙
 ├─ assets/
 │  ├─ prompt-guide-usage.svg          # 가이드 사용 흐름
 │  └─ screenshots/                    # README용 실제 웹 화면
@@ -110,4 +113,4 @@ python -m http.server 8000
 3. **Settings → Pages → Source**에서 **GitHub Actions**를 선택합니다.
 4. `main` 브랜치에 푸시하면 배포가 실행됩니다.
 
-`Download MD` 버튼은 같은 저장소의 `downloads/video_prompt_writing_rules.md`를 직접 제공하므로 GitHub Pages와 일반 정적 호스팅에서 모두 동작합니다.
+`Download GPT Rules MD` 버튼은 같은 저장소의 `downloads/video_prompt_writing_rules_for_gpt.md`를 직접 제공하므로 GitHub Pages와 일반 정적 호스팅에서 모두 동작합니다.

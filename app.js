@@ -409,7 +409,7 @@ async function copyPrompt(button) {
 
 $("#guide-nav").addEventListener("click", showGuide);
 document.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", () => copyPrompt(button)));
-$("#guide-download").href = config.guideUrl;
+$("#guide-download").href = config.guideDownloadUrl || "./downloads/video_prompt_writing_rules_for_gpt.md";
 
 // The guide is the library's landing view. Selecting an entry switches back to its video and prompts.
 showGuide();
